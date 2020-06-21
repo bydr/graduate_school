@@ -14,15 +14,15 @@
 
     <!-- Template Basic Images Start -->
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="../img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
     <!-- Template Basic Images End -->
 
     <!-- Custom Browsers Color Start -->
     <meta name="theme-color" content="#000">
     <!-- Custom Browsers Color End -->
 
-    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="/css/main.min.css">
 
 </head>
 
