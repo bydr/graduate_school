@@ -338,3 +338,38 @@ function addOrdersForStudets($idOrder, $idStudents) {
     }
 }
 
+function getGroupExamsStudents() {
+    $db = connection();
+    $query = mysqli_query($db,"
+        select
+    sg.id as 'group_id',
+       sg.group as 'group_title',
+       e.title as 'exam',
+       eg.date,
+       eg.time,
+       eg.audience,
+       s.surname as 'surname_student',
+       s.name as 'name_student',
+       s.patronymic as 'patronymic_student',
+       s.phone,
+       s.date_begin,
+       s.date_end,
+       s2.name as 'name_supervisor',
+       s2.surname as 'surname_supervisor',
+       s2.patronymic as 'patronymic_supervisor'
+from student_groups sg
+    join students s on sg.student_id = s.id
+    join supervisors s2 on s.supervisor_id = s2.id
+    left join exams_groups eg on sg.`group` = eg.`group`
+    left join exams e on eg.exam_id = e.id
+order by group_title desc, surname_student, name_student, patronymic_student
+");
+
+    $result = array();
+    while ($row = mysqli_fetch_assoc($query)) {
+        $result[] = $row;
+    }
+    return $result;
+}
+
+

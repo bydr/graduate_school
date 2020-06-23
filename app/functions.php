@@ -9,6 +9,7 @@ $orders = getAllOrders();
 $ordersForStudents = getOrdersForStudents();
 $ordersForSupervisors = getOrdersForSupervisors();
 $studentTypes = getAllStudentsType();
+$groupExamsStudents = getGroupExamsStudents();
 
 const SCAN_PATH = '/img/_src/scans/';
 const SCAN_FILE_EXTENSION = ['.jpg', '.png', '.jpeg'];
